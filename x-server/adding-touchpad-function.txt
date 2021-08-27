@@ -1,0 +1,12 @@
+// Добавление необходимых компонентов для работы touchpad:
+    1. Переходим в каталог /etc/X11/xorg.conf.d/
+    2. Создаем файл 30-touchpad.conf
+    3. В данном файле прописываем следующее:
+    	Section "InputClass"
+        		Identifier "touchpad"
+    		Driver "libinput"
+        		MatchIsTouchpad "on"
+        		Option "Tapping" "on"
+        		Option "ScrollMethod" "edge"
+    	EndSection
+    4. Перезапускаем систему
